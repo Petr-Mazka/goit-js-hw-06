@@ -1,4 +1,3 @@
-"use strict";
 // Задание 1
 
 const categoryList = document.querySelector(".categories");
