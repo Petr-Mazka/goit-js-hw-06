@@ -1,4 +1,4 @@
-//Задание 2
+// Задание 2
 
 const ingredients = [
   'Potatoes',
@@ -11,7 +11,7 @@ const ingredients = [
 
 const list = document.querySelector('#ingredients');
 
-//Функция для второго задания
+// Функция для второго задания
 const addListItem = () => {
   const ingredientListElement = ingredients.forEach((ingredient) => {
     const listItem = document.createElement("li");

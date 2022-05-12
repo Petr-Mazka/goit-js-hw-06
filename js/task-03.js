@@ -1,4 +1,4 @@
-//Задание 3
+// Задание 3
 
 const images = [
   {
@@ -17,7 +17,7 @@ const images = [
 
 const imgGallery = document.querySelector(".gallery");
 
-//Функция для третьего задания
+// Функция для третьего задания
 const galleryCreator = () => {
   imgGallery.insertAdjacentHTML("afterbegin", images.map((image) => `<li class="gallery__item"><img src="${image.url}" alt="${image.alt}" width="250px" class="gallery__image"></li>`).join(""));
 

@@ -1,6 +1,6 @@
-//Задание 5
+// Задание 5
 
-//Функция для пятого задания
+// Функция для пятого задания
 const inputPlace = document.querySelector('#name-input');
 const outputPlace = document.querySelector('#name-output');
 
