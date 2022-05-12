@@ -3,7 +3,7 @@
 const inputField = document.querySelector('#validation-input');
 const inputFieldCorrect = document.querySelector('input[data-length]');
 
-// Функция для проверки валидности введенного значения
+// Функция для шестого задания
 
 const checkInputValidity = (event) => {
     if(event.target.value.length == inputFieldCorrect.dataset.length) {
