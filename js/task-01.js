@@ -1,28 +1,19 @@
 // Задание 1
 
-const categoryList = document.querySelector(".categories");
-const categories = document.querySelectorAll(".item");
-const categoriesArray = Array.from(categories);
-const title = document.querySelectorAll("h2");
-const nameArray = [];
-const titleArray = [...title];
-const categoriesItems = document.querySelectorAll("li.item > ul");
-const catItemsArray = [...categoriesItems];
+const categories = document.querySelector('#categories');
+const categoriesList = categories.querySelectorAll('li.item');
+const categoriesListLength = categoriesList.length;
 
-// Функция для первого задания
-const categoriesCounter = () => {
-    const catArrayLength = categoriesArray.length;
-    console.log(`Number of categories : ${catArrayLength}`);
+//Функция для первого задания
 
-    for (const item of titleArray) {
-        const name = item.textContent;
-        nameArray.push(name);
-    }
-    
-    
-    for ( let i = 0; i < catArrayLength; i += 1) {
-        console.log(`Category : ${nameArray[i]}
-Count : ${catItemsArray[i].children.length}`);
-    }
+const getCategory = () => {
+    console.log(`Number of categories: ${categoriesListLength}`);
+    categoriesList.forEach((category) => {
+        const categoryTitle = category.querySelector('h2').textContent;
+        const categoryList = category.querySelectorAll('li');
+        const categoryListLength = categoriesList.length;
+        console.log(`Category: ${categoryTitle}
+Elements: ${categoryListLength}`);
+    });
 }
-categoriesCounter();
+getCategory();

@@ -11,21 +11,21 @@ const firstField = fieldsNames[0];
 const lastField = fieldsNames[1];
 
 const userData = {
-    [firstField]: '',
-    [lastField]: ''
+    email: '',
+    password: ''
 }
 
 // Функция для восьмого задания
 
 const getUserData = () => {
     mailInput.addEventListener('input', (event) => {
-        userData[firstField] = event.target.value;
+        userData.email = event.target.value;
     });
     passwordInput.addEventListener('input', (event) => {
-        userData[lastField] = event.target.value;
+        userData.password = event.target.value;
     });
     mainForm.addEventListener('submit', (event) => {
-        if (userData[firstField] === '' || userData[lastField] === '') {
+        if (userData.email === '' || userData.password === '') {
             alert('Please, fill in all fields');
         } else {
             console.log(userData);

@@ -9,15 +9,18 @@ const ingredients = [
   'Condiments',
 ];
 
-const list = document.querySelector('#ingredients');
+
+const ingredientsList = document.querySelector('#ingredients');
+const ingredientsListLength = ingredients.length;
 
 // Функция для второго задания
-const addListItem = () => {
-  const ingredientListElement = ingredients.forEach((ingredient) => {
-    const listItem = document.createElement("li");
-    listItem.innerHTML = ingredient;
-    const listItemClass = listItem.classList.add("item");
-    list.appendChild(listItem);
-  });
+
+const createList = () => {
+  for (let i = 0; i < ingredientsListLength; i++) {
+    const listItem = document.createElement('li');
+    listItem.classList.add('item');
+    listItem.textContent = ingredients[i];
+    ingredientsList.append(listItem);
+  }
 }
-addListItem();
+createList();
