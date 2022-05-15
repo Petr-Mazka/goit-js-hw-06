@@ -13,14 +13,21 @@ const ingredients = [
 const ingredientsList = document.querySelector('#ingredients');
 const ingredientsListLength = ingredients.length;
 
-// Функция для второго задания
+// Напиши скрипт, который с помошью метода map для каждого элемента массива ingredients:
 
-const createList = () => {
-  for (let i = 0; i < ingredientsListLength; i++) {
-    const listItem = document.createElement('li');
-    listItem.classList.add('item');
-    listItem.textContent = ingredients[i];
-    ingredientsList.append(listItem);
-  }
+// Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
+// Добавит название ингредиента как его текстовое содержимое.
+// Добавит элементу класс item.
+// После чего вставит все <li> за одну операцию в список ul.ingredients.
+
+const addListItem = () => {
+const ingredientsListItem = ingredients.map(item => {
+  const li = document.createElement('li');
+  li.textContent = item;
+  li.classList.add('item');
+  return li;
+});
+ingredientsList.append(...ingredientsListItem);
+console.log("hi");
 }
-createList();
+addListItem();
